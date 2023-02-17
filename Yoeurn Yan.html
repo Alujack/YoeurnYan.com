@@ -1,0 +1,120 @@
+
+<!-- saved from url=(0032)http://127.0.0.1:5500/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>
+  .subscribebutton{
+    background-color:rgb(155, 0, 0);
+    color: whitesmoke;
+    font:bold;
+    border-width:1px;
+    border-color:rgb(53, 4, 4);
+    border-radius: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 5px;
+    padding-right:5px;
+    margin-right:10px;
+    cursor:pointer;
+    transition:opacity 0.15s;
+  }
+  .subscribebutton:hover{
+    opacity:0.8;
+  }
+  .subscribebutton:active{
+    opacity: 0.3;
+  }
+  .joinbutton{
+    background-color: aliceblue;
+    border-color:rgb(0, 0, 255);
+    font:bold;
+    color:rgb(0, 0, 255);
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 7px;
+    padding-right:7px;
+    border-radius:5px;
+    border-width: 1.9px;
+    cursor: pointer;
+    transition:background-color 0.15s
+    color 0.15s;
+   }
+   .joinbutton:hover{
+    background-color:rgb(0, 0, 255);
+    color:white
+   }
+   .joinbutton:active{
+    opacity:0.5;
+   }
+  .tweetbutton{
+    background-color:rgb(102, 102, 250);
+    color:white;
+    border-color: rgb(6, 40, 235);
+    border-style:solid;
+    border-width:1px;
+    font-size:18px;
+    font:bold;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 17px;
+    padding-right: 17px;
+  border-radius: 30px;
+    margin-left:10px;
+    cursor: pointer;
+  }
+  .tweetbutton:active{
+    box-shadow:2px 2px 5px rgba(0,0,0.15);
+  }
+  }
+
+</style>
+
+
+
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yoeurn Yan</title>
+</head>
+<body>
+  <button class="subscribebutton">SUBSCRIBE</button>
+  <button class="joinbutton">JOIN</button>
+  <button class="tweetbutton">Tweet</button>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</body></html>
